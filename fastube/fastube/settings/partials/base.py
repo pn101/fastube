@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'fastube',
+    'users',
 ]
 
 MIDDLEWARE_CLASSES = [
