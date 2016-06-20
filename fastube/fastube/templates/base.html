@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+{% load staticfiles %}<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <title>{% block title %}{% endblock %}</title>
-        
+        <link rel="stylesheet" href="{% static "stylesheets/main.css" %}">
+        <link rel="stylesheet" href="{% static "stylesheets/partials/header.css" %}">
+        <link rel="stylesheet" href="{% static "stylesheets/partials/footer.css" %}">
+
     </head>
 
     <body>
