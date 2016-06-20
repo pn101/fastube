@@ -2,7 +2,7 @@
     <ul>
         {% if request.user.is_authenticated %}
         <li>Welcome, <a href="{% url 'user:mypage' %}">{{ request.user.username }}</a></li>        
-        <li><a href="">Logout</a></li>
+        <li><a href="{% url 'user:logout' %}">Logout</a></li>
         {% else %}
         <li><a href="{% url 'user:login' %}">Login</a></li>
         <li><a href="{% url 'user:signup' %}">Signup</a></li>
