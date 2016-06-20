@@ -20,6 +20,27 @@ STATIC_ROOT = os.path.join(
         'static',
 )
 
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
+PIPELINE = {
+    'PIPELINE_ENABLED': True,
+    'STYLESHEETS': {
+        'fastube': {
+            'source_filenames': (
+              'stylesheets/main.css',
+              'stylesheets/partials/*.css',
+            ),
+            'output_filename': 'stylesheets/fastube.css',
+        }
+    }
+}
+
 # Media Files
 MEDIA_ROOT = os.path.join(
         PROJECT_ROOT_DIR,
