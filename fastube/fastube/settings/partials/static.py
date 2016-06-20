@@ -29,7 +29,6 @@ STATICFILES_FINDERS = (
 )
 
 PIPELINE = {
-    'PIPELINE_ENABLED': True,
     'STYLESHEETS': {
         'fastube': {
             'source_filenames': (
