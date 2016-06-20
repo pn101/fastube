@@ -7,7 +7,7 @@ class SignupView(View):
     def get(self, request, *args, **kwargs):
         return render(
                 request,
-                'auth/signup.html',
+                'user/signup.html',
                 {
                     'site_name': 'Signup Page',
                 }

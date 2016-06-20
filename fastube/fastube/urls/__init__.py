@@ -9,6 +9,6 @@ from users.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^signup/$', SignupView.as_view(), name='signup'),
+    url(r'^', include('fastube.urls.users', namespace='users')),
 
 ] + static(settings.MEDIA_URL, documentroot=settings.MEDIA_ROOT)
