@@ -1,7 +1,6 @@
 from django.views.generic import View
 from django.shortcuts import render, redirect
-
-from users.models import User
+from django.contrib.auth import get_user_model
 
 
 class SignupView(View):
@@ -21,7 +20,7 @@ class SignupView(View):
         email = request.POST.get('email')
         phonenumber = request.POST.get('phonenumber')
 
-        user = User.objects.create_user(
+        user = get_user_model().objects.create_user(
                 username=username,
                 password=password,
                 email=email,
