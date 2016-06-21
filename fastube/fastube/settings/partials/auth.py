@@ -26,7 +26,7 @@ SIGNUP_SUCCESS_MESSAGE = 'Signup Complete'
 LOGIN_ERROR_MESSAGE = 'Login Failed. Please try again'
 
 AUTHENTICATION_BACKENDS = (
-        'social.backend.facebook.FacebookOAuth2',
+        'social.backends.facebook.FacebookOAuth2',
 
         'django.contrib.auth.backends.ModelBackend',
 )
