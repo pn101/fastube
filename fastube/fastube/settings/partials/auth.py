@@ -19,3 +19,8 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTH_USER_MODEL = 'users.User'
 
 LOGIN_URL = '/login/'
+
+LOGIN_SUCCESS_MESSAGE = 'Login Successful'
+LOGOUT_SUCCESS_MESSAGE = 'Logout Successful'
+SIGNUP_SUCCESS_MESSAGE = 'Signup Complete'
+LOGIN_ERROR_MESSAGE = 'Login Failed. Please try again'
