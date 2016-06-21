@@ -1,6 +1,7 @@
 from django.views.generic import View
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
+from django.contrib import messages
 
 
 class SignupView(View):
@@ -28,6 +29,11 @@ class SignupView(View):
                 email=email,
                 phonenumber=phonenumber,
         )
-        # TODO: flash messages (success, error message)
+
+        messages.add_message(
+                request,
+                messages.SUCCESS,
+                'Signup successful',
+        )
 
         return redirect('user:login')
