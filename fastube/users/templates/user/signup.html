@@ -12,4 +12,13 @@
         <input type="text" name="phonenumber" placeholder="phonenumber" required>
         <input type="submit" value="Signup">
     </form>
+
+    <section class="social-login">
+        <ul>
+            <li>
+                <a href="{% url 'social:begin' backend='facebook' %}">Signup via Facebook</a>
+            </li>
+        </ul>
+    </section>
+
 {% endblock %}
