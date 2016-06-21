@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.views.generic import View
 from django.contrib.auth import logout
 from django.shortcuts import redirect
+from django.conf import settings
 
 
 class LogoutView(View):
@@ -11,6 +12,6 @@ class LogoutView(View):
         messages.add_message(
                 request,
                 messages.SUCCESS,
-                'Thank you, come again',
+                settings.LOGOUT_SUCCESS_MESSAGE,
         )
         return redirect('user:login')

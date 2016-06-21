@@ -2,6 +2,7 @@ from django.views.generic import View
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from django.conf import settings
 
 
 class LoginView(View):
@@ -28,7 +29,7 @@ class LoginView(View):
             messages.add_message(
                     request,
                     messages.SUCCESS,
-                    'Login Successful',
+                    settings.LOGIN_SUCCESS_MESSAGE,
             )
 
             return redirect(next_page)
@@ -36,6 +37,6 @@ class LoginView(View):
         messages.add_message(
                 request,
                 messages.ERROR,
-                'Login Failed',
+                settings.LOGIN_ERROR_MESSAGE,
         )
         return redirect('user:login')
