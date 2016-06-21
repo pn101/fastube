@@ -1,2 +1,4 @@
 django
 requests
+django-pipeline
+python-social-auth
