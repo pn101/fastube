@@ -50,4 +50,4 @@ SOCIAL_AUTH_PIPELINE = (
             'social.pipeline.user.user_details',
 )
 
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/login/'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/mypage/'
