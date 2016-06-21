@@ -20,11 +20,14 @@ class SignupView(View):
         email = request.POST.get('email')
         phonenumber = request.POST.get('phonenumber')
 
+        # TODO: validations (username)
+
         user = get_user_model().objects.create_user(
                 username=username,
                 password=password,
                 email=email,
                 phonenumber=phonenumber,
         )
+        # TODO: flash messages (success, error message)
 
         return redirect('user:login')
