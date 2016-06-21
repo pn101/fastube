@@ -24,3 +24,7 @@ LOGIN_SUCCESS_MESSAGE = 'Login Successful'
 LOGOUT_SUCCESS_MESSAGE = 'Logout Successful'
 SIGNUP_SUCCESS_MESSAGE = 'Signup Complete'
 LOGIN_ERROR_MESSAGE = 'Login Failed. Please try again'
+
+AUTHENTICATION_BACKENDS = (
+
+)
