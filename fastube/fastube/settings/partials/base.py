@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'pipeline',
 
     'users',
+    'posts',
 ]
 
 MIDDLEWARE_CLASSES = [
