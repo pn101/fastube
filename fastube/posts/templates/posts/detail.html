@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ site_name }}{% endblock %}
+
+{% block content %}
+<h1>{{ post.title }}</h1>
+<iframe width="560" height="315" src="{{ post.youtube_embed_url }}" frameborder="0" allowfullscreen></iframe></br>
+<a href="{{ post.youtube_original_url }}">Go to youtube.com</a>
+<p>{{ post.content }}</p>
+{% endblock %}
