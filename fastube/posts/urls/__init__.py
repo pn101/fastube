@@ -4,7 +4,7 @@ from posts.views import *
 
 
 urlpatterns = [
-    url(r'^new/$', PostCreateFormView.as_view(), name='new'),
+    url(r'^new/$', PostCreateView.as_view(), name='new'),
     url(r'^confirm/$', PostCreateConfirmView.as_view(), name='confirm'),
 
 ]
