@@ -27,7 +27,11 @@ class Post(models.Model):
         )
     youtube_original_url = property(get_youtube_original_url)
 
-    # TODO: YouTube Embed URL
+    def get_youtube_embed_url(self):
+        return 'https://www.youtube.com/embed/{video_id}'.format(
+                video_id=self.video_id,
+        )
+    youtube_embed_url = property(get_youtube_embed_url)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
