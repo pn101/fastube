@@ -1,10 +1,11 @@
 from django.views.generic import View
 from django.shortcuts import render, redirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from posts.utils import youtube
 
 
-class PostCreateView(View):
+class PostCreateView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         return render(
@@ -29,7 +30,7 @@ class PostCreateView(View):
         return redirect('posts:new')
 
 
-class PostCreateConfirmView(View):
+class PostCreateConfirmView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         return redirect('posts:new')
