@@ -32,3 +32,17 @@ class PostModelTestCase(TestCase):
                 self.post.youtube_original_url,
                 youtube_original_url,
         )
+
+    def test_post_model_embed_url(self):
+        youtube_embed_url = 'https://www.youtube.com/embed/{post_video_id}'.format(
+                post_video_id=self.post.video_id,
+        )
+
+        self.assertEqual(
+                self.post.get_youtube_embed_url(),
+                youtube_embed_url,
+        )
+        self.assertEqual(
+                self.post.youtube_embed_url,
+                youtube_embed_url,
+        )
