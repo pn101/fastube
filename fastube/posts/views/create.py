@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from posts.utils import youtube
 
 
-class PostCreateFormView(View):
+class PostCreateView(View):
 
     def get(self, request, *args, **kwargs):
         return render(
