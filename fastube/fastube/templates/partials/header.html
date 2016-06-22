@@ -1,5 +1,6 @@
 <header>
     <ul>
+        <li><a href="{% url 'posts:list' %}">Fastube</a></li>
         {% if request.user.is_authenticated %}
         <li>Welcome, <a href="{% url 'user:mypage' %}">{{ request.user.username }}</a></li>        
         <li><a href="{% url 'user:logout' %}">Logout</a></li>
