@@ -7,6 +7,7 @@
 <iframe width="560" height="315" src="{{ youtube_embed_url }}" frameborder="0" allowfullscreen></iframe></br>
 <a href="{{ youtube_original_url }}">Go to youtube.com</a>
 <p>{{ content }}</p>
+<img src="{{ youtube_thumbnail_url }}" alt="{{ title }}">
 
 <form action="{% url 'posts:new' %}" method="POST">
     {% csrf_token %} 
