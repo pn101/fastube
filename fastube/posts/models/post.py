@@ -38,6 +38,11 @@ class Post(models.Model):
         return get_youtube_embed_url_from_youtube(self.video_id)
     youtube_embed_url = property(get_youtube_embed_url)
 
+    def get_youtube_thumbnail_url(self):
+        from posts.utils import get_youtube_thumbnail_url as get_youtube_thumbnail_url_from_youtube
+        return get_thumbnail_url_from_youtube(self.video_id)
+    youtube_thumbnail_url = property(get_youtube_thumbnail_url)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
