@@ -4,4 +4,11 @@
 
 {% block content %}
     <h1>{{ site_name }}</h1>
+    <p>Welcome, {{ request.user.first_name }} {{ request.user.last_name }}</p>
+    <ul>
+        {% for post in request.user.post_set.all %}
+        <img src="{{ post.youtube_thumbnail_url }}" alt="{{ post.title }}" height="68" width="90">
+        <a href="{% url 'posts:detail' slug=post.hash_id %}"><li>{{ post.title }}</li></a>
+        {% endfor %}
+    </ul>
 {% endblock %}
