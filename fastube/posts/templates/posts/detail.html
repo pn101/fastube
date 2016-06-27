@@ -7,4 +7,17 @@
 <iframe width="560" height="315" src="{{ post.youtube_embed_url }}" frameborder="0" allowfullscreen></iframe></br>
 <a href="{{ post.youtube_original_url }}">Go to youtube.com</a>
 <p>{{ post.content }}</p>
+
+<h2>Comments ({{ post.comment_set.count }})</h2>
+<ul>
+    {% for comment in post.comment_set.all %}
+    <li>{{ comment.content }}: posted by <a href="">{{ comment.user.username }}</a></li>
+    {% endfor %}
+</ul>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="comment" placeholder="comment" required>
+    <input type="submit" value="Add Comment">
+</form>
 {% endblock %}
