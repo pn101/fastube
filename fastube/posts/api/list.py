@@ -1,5 +1,3 @@
-import json
-
 from rest_framework.generics import ListAPIView
 
 from posts.models import Post
