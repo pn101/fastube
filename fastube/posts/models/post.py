@@ -8,6 +8,12 @@ class Post(models.Model):
 
     user = models.ForeignKey(User)
 
+    like_user_set = models.ManyToManyField(
+            User,
+            related_name='like_post_set',
+            through='Like',
+    )
+
     hash_id = models.CharField(
             max_length=8,
             blank=True,
