@@ -27,7 +27,11 @@ $(document).ready(function() {
     commentsCreateFormElement.submit(function() {
         var content = $(commentsCreateFormInputContentElement).val();
         alert(commentAPIURL);
-        $(commentsCreateFormInputContentElement).val('')
+        $(commentsCreateFormInputContentElement).val('');
+        var newCommentList = $('<li>').text(content);
+        $('.comments-list').append(newCommentList);
+
+        // TODO: Need to craft comment append function
 
         return false;
     });
