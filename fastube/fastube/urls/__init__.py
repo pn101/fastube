@@ -9,6 +9,8 @@ urlpatterns = [
 
     url('', include('social.apps.django_app.urls', namespace='social')),
 
+    url(r'^api/', include('fastube.urls.api', namespace='api')),
+
     url(r'^', include('users.urls', namespace='user')),
     url(r'^posts/', include('posts.urls', namespace='posts')),
 
