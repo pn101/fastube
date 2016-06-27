@@ -27,7 +27,7 @@ class PostCreateView(LoginRequiredMixin, View):
                 content=content,
         )
 
-        return redirect('posts:new')
+        return redirect(post)
 
 
 class PostCreateConfirmView(LoginRequiredMixin, View):
