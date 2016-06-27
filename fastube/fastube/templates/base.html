@@ -19,6 +19,7 @@
         </section>
         {% include 'partials/footer.html' %}
 
-        {% javascript "posts" %}
+        {% block custom_javascript %}
+        {% endblock %}
     </body>
 </html>
