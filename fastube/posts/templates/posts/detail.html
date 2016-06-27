@@ -9,11 +9,8 @@
 <a href="{{ post.youtube_original_url }}">Go to youtube.com</a>
 <p>{{ post.content }}</p>
 
-<h2>Comments ({{ post.comment_set.count }})</h2>
-<ul>
-    {% for comment in post.comment_set.all %}
-    <li>{{ comment.content }}: posted by <a href="">{{ comment.user.username }}</a></li>
-    {% endfor %}
+<h2>Comments (<span id="comments-count" data-post-slug="{{ post.hash_id }}"></span>)</h2>
+<ul class="comments-list">
 </ul>
 
 <section id="comments-section">
