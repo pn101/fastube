@@ -3,3 +3,4 @@ requests
 django-pipeline
 python-social-auth
 hashids
+djangorestframework
