@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load pipeline %}
 
 {% block title %}{{ site_name }}{% endblock %}
 
@@ -15,9 +16,14 @@
     {% endfor %}
 </ul>
 
-<form action="" method="POST">
-    {% csrf_token %}
-    <input type="text" name="comment" placeholder="comment" required>
-    <input type="submit" value="Add Comment">
-</form>
+<section id="comments-section">
+    <form>
+        <input type="text" name="content" placeholder="comment" required>
+        <input type="submit" value="Add Comment">
+    </form>
+</section>
+{% endblock %}
+
+{% block custom_javascript %}
+    {% javascript "posts" %}
 {% endblock %}
