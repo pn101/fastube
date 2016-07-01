@@ -26,8 +26,6 @@ $(document).ready(function() {
 
     commentsCreateFormElement.submit(function() {
         var content = $(commentsCreateFormInputContentElement).val();
-        alert(commentAPIURL);
-        $(commentsCreateFormInputContentElement).val('');
         var newCommentList = $('<li>').text(content);
         $('.comments-list').append(newCommentList);
 
