@@ -4,3 +4,7 @@ django-pipeline
 python-social-auth
 hashids
 djangorestframework
+celery
+celery[redis]
+redis
+flower
