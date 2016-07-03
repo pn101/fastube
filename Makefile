@@ -4,3 +4,6 @@ migrate:
 
 test:
 	- python fastube/manage.py test users posts tags
+
+services:
+	- redis-server

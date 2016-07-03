@@ -9,4 +9,4 @@ from users.tasks import SimpleTask
 def post_save_user(sender, instance, created, **kwargs):
     if created:
         sms = SimpleTask()
-        sms.run(instance)
+        sms.delay(instance)
