@@ -80,7 +80,7 @@ $(document).ready(function() {
                 $(commentsCreateFormInputContentElement).val('');
 
             },
-            error: function() {},
+            error: function(data) {},
         })
 
         // TODO: Need to craft comment append function
