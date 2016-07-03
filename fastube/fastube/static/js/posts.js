@@ -65,11 +65,10 @@ $(document).ready(function() {
             type: 'POST',
             data: data,
             success: function(data) {
-                var commentContent = data.content;
-                var commentUsername = data.username;
 
                 // add comment
-                var newCommentList = $('<li>').text(content);
+                var commentContent = data.content + ' : posted by ' + data.username;
+                var newCommentList = $('<li>').text(commentContent);
                 $('.comments-list').append(newCommentList);
 
                 // update comment count
