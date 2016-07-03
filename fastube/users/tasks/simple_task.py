@@ -1,8 +1,10 @@
 import requests
 from time import sleep
 
+from celery import Task
 
-class SimpleTask():
+
+class SimpleTask(Task):
 
     def run(self, instance):
         sleep(3)
