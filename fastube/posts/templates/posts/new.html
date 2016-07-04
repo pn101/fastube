@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ site_name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ site_name }}</h1>
+    <form action="{% url 'posts:confirm' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="title" required>
+        <input type="text" name="video_id" placeholder="video_id" required>
+        <textarea name="content" placeholder="content"></textarea>
+        <input type="submit" value="Publish">
+    </form>
+{% endblock %}

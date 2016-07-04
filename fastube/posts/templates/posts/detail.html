@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load pipeline %}
+
+{% block title %}{{ site_name }}{% endblock %}
+
+{% block content %}
+<h1>{{ post.title }}</h1>
+<iframe width="560" height="315" src="{{ post.youtube_embed_url }}" frameborder="0" allowfullscreen></iframe></br>
+<a href="{{ post.youtube_original_url }}">Go to youtube.com</a>
+<p>{{ post.content }}</p>
+
+<h2>Comments (<span id="comments-count" data-post-slug="{{ post.hash_id }}"></span>)</h2>
+<ul class="comments-list">
+</ul>
+
+<section id="comments-section">
+    <form>
+        <input type="text" name="content" placeholder="comment" required>
+        <input type="submit" value="Add Comment">
+    </form>
+</section>
+{% endblock %}
+
+{% block custom_javascript %}
+    {% javascript "posts" %}
+{% endblock %}

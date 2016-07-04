@@ -6,6 +6,8 @@
         <title>{% block title %}{% endblock %}</title>
         {% stylesheet "fastube" %}
 
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
     </head>
 
     <body>
@@ -16,5 +18,8 @@
             {% endblock %}
         </section>
         {% include 'partials/footer.html' %}
+
+        {% block custom_javascript %}
+        {% endblock %}
     </body>
 </html>

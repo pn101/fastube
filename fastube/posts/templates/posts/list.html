@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ site_name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ site_name }}</h1>
+    <a href="{% url 'posts:new' %}">Add to List</a>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <a href="{{ post.get_absolute_url }}"><h2>{{ post.title }}</h2></a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

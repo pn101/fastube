@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ site_name }}{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<iframe width="560" height="315" src="{{ youtube_embed_url }}" frameborder="0" allowfullscreen></iframe></br>
+<a href="{{ youtube_original_url }}">Go to youtube.com</a>
+<p>{{ content }}</p>
+<img src="{{ youtube_thumbnail_url }}" alt="{{ title }}">
+
+<form action="{% url 'posts:new' %}" method="POST">
+    {% csrf_token %} 
+    <p>Are you sure you want to publish this post?</p>
+    <input type="hidden" name="title" value="{{ title }}">
+    <input type="hidden" name="video_id" value="{{ video_id }}">
+    <input type="hidden" name="content" value="{{ content }}">
+    <input type="submit">
+</form>
+{% endblock %}

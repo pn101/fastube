@@ -2,3 +2,8 @@ django
 requests
 django-pipeline
 python-social-auth
+hashids
+djangorestframework
+celery
+redis
+flower
